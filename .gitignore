@@ -1,0 +1,21 @@
+# .gitignore
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Optional: Uncomment if you want to ignore large model files
+# *.glb
+# *.gltf

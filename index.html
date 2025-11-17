@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D 模型展示 - Blender to Web</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 600px;
+      background-color: #f5f5f5;
+    }
+
+    .info {
+      padding: 30px;
+      background: white;
+    }
+
+    .info h2 {
+      color: #667eea;
+      margin-top: 0;
+    }
+
+    .info p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .instructions {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .instructions h3 {
+      color: #764ba2;
+      margin-top: 0;
+    }
+
+    .instructions ul {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .footer {
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 3D 模型展示</h1>
+  
+  <div class="container">
+    <!-- 3D 模型查看器 -->
+    <model-viewer 
+      src="assets/models/your-model.glb" 
+      alt="3D 模型"
+      auto-rotate 
+      camera-controls 
+      shadow-intensity="1"
+      exposure="1"
+      shadow-softness="0.5">
+    </model-viewer>
+
+    <div class="info">
+      <h2>欢迎来到 3D 模型展示页面</h2>
+      <p>
+        这是一个使用 <strong>Blender</strong> 创建并通过 <strong>GitHub Pages</strong> 托管的 3D 模型展示页面。
+        你可以使用鼠标或触摸屏与模型进行交互。
+      </p>
+
+      <div class="instructions">
+        <h3>📋 使用说明</h3>
+        <ul>
+          <li><strong>旋转模型：</strong>点击并拖动鼠标</li>
+          <li><strong>缩放模型：</strong>使用鼠标滚轮或双指捏合</li>
+          <li><strong>移动视角：</strong>按住右键拖动（或双指滑动）</li>
+          <li><strong>自动旋转：</strong>模型会自动缓慢旋转展示</li>
+        </ul>
+
+        <h3>🚀 如何上传你的模型</h3>
+        <ul>
+          <li>将你的 <code>.glb</code> 文件放入 <code>assets/models/</code> 文件夹</li>
+          <li>重命名文件为 <code>your-model.glb</code>，或修改 HTML 中的 <code>src</code> 路径</li>
+          <li>提交并推送到 GitHub</li>
+          <li>等待 GitHub Pages 自动部署（通常需要几分钟）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>由 <a href="https://www.blender.org/" target="_blank">Blender</a> 创建 | 托管于 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  </div>
+</body>
+</html>
