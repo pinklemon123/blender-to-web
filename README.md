@@ -46,16 +46,22 @@ git push -u origin main
 
 ### 4. 启用 GitHub Pages
 
+**本项目已通过 GitHub Actions 自动配置部署！** 🚀
+
+当你推送代码到 `main` 分支时，GitHub Actions 会自动部署网站。你只需要：
+
 1. 进入 GitHub 仓库页面
 2. 点击 **Settings**（设置）
 3. 在左侧菜单找到 **Pages**
-4. 在 **Source** 下选择 **main** 分支
-5. 保存后等待几分钟
+4. 在 **Source** 下选择 **GitHub Actions**（如果尚未设置）
+5. 推送到 `main` 分支后，GitHub Actions 会自动部署
 
 你的网站将会在以下地址访问：
 ```
 https://pinklemon123.github.io/blender-to-web/
 ```
+
+部署通常在几分钟内完成。你可以在仓库的 **Actions** 标签页查看部署状态。
 
 ## 📁 项目结构
 
